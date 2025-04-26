@@ -1,0 +1,45 @@
+# Entornos virtuales Python
+venv/
+.env/
+.envrc
+
+# Node.js
+node_modules/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VSCode settings locales
+.vscode/
+
+# Archivos de dependencias de web bundlers
+dist/
+build/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+
+# Archivos de sistema Git
+*.orig
+
+# Backup de editores
+*~ 
+
+# Otros archivos que no quieras subir
+.idea/
+*.pyc
+__pycache__/
+
+# Webpack y empaquetadores
+.cache/
+
+# Configuración de serve
+serve.json

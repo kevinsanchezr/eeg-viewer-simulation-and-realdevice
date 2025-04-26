@@ -1,0 +1,132 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  background-color: #f4f6fa;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #0066ff;
+  margin-bottom: 20px;
+}
+
+/* DISPOSITIVO */
+.device-connection {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  min-width: 280px;
+}
+
+.device-connection h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.connect-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.connect-btn:hover {
+  background-color: #004ecc;
+}
+
+/* ESTADO CONEXIÓN */
+.status {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.connected {
+  background-color: #d4f5d4;
+  color: #007a00;
+}
+
+.disconnected {
+  background-color: #ffe0e0;
+  color: #cc0000;
+}
+
+/* GRÁFICAS EEG */
+.charts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  gap: 0;
+  box-sizing: border-box;
+}
+
+.eeg-channel {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.channel-label {
+  width: 50px;
+  min-width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #333;
+  border-right: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 14px;
+  text-align: center;
+}
+
+.chart {
+  flex-grow: 1;
+  height: 25vh;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  min-width: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .device-connection {
+    width: 100%;
+  }
+
+  .charts {
+    width: 100%;
+  }
+
+  .chart {
+    height: 22vh;
+  }
+}

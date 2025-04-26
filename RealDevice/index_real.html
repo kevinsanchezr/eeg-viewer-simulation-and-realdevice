@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EEG Viewer - Real Device</title>
+    <link rel="stylesheet" href="style_real.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🧠 EEG Viewer - Real Device</h1>
+
+      <div class="device-connection">
+        <h2>Connect your BrainBit</h2>
+        <button class="connect-btn" id="connectDeviceBtn">
+          🔌 Connect Device
+        </button>
+
+        <!-- Información de estado -->
+        <div id="connectionStatus" class="status disconnected">
+          Disconnected
+        </div>
+      </div>
+
+      <!-- Gráficas EEG -->
+      <div class="charts">
+        <div class="eeg-channel">
+          <div class="channel-label">O1</div>
+          <div class="chart" id="chart-o1"></div>
+        </div>
+        <div class="eeg-channel">
+          <div class="channel-label">O2</div>
+          <div class="chart" id="chart-o2"></div>
+        </div>
+        <div class="eeg-channel">
+          <div class="channel-label">T3</div>
+          <div class="chart" id="chart-t3"></div>
+        </div>
+        <div class="eeg-channel">
+          <div class="channel-label">T4</div>
+          <div class="chart" id="chart-t4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <script type="module" src="script_real.js"></script>
+  </body>
+</html>

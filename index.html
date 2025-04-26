@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Visualización EEG Real</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🧠 EEG Viewer</h1>
+
+      <div class="mode-selection">
+        <!-- 🧪 SIMULACIÓN -->
+        <div class="mode-card" id="simMode">
+          <h2>Simulation</h2>
+          <p>Use simulated EEG data for testing without hardware</p>
+          <button class="mode-btn pink-btn" id="simBtn">
+            Use Simulation Mode
+          </button>
+
+          <!-- Controles simulación -->
+          <div class="control-panel" id="simControls" style="display: none">
+            <div class="control-buttons">
+              <div class="buttons">
+                <button id="playPauseBtn">Start</button>
+                <button id="resetBtn">Reset</button>
+              </div>
+
+              <div class="control-group">
+                <label for="amplitudeSelect">Amplitud (µV)</label>
+                <select id="amplitudeSelect">
+                  <option value="20">20</option>
+                  <option value="50" selected>50</option>
+                  <option value="70">70</option>
+                  <option value="100">100</option>
+                  <option value="150">150</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="durationSelect">Duración (s)</label>
+                <select id="durationSelect">
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔌 DISPOSITIVO REAL -->
+        <div class="mode-card" id="realMode">
+          <h2>Real Device</h2>
+          <p>Connect to a physical BrainBit device via Bluetooth</p>
+          <button class="mode-btn blue-btn" id="realBtn">Connect Device</button>
+
+          <!-- Controles dispositivo real -->
+          <div class="control-panel" id="realControls" style="display: none">
+            <p><em>Real device control panel coming soon...</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gráficas EEG -->
+      <div class="charts">
+        <div class="eeg-channel">
+          <div class="channel-label">O1</div>
+          <div class="chart" id="chart-o1"></div>
+        </div>
+        <div class="eeg-channel">
+          <div class="channel-label">O2</div>
+          <div class="chart" id="chart-o2"></div>
+        </div>
+        <div class="eeg-channel">
+          <div class="channel-label">T3</div>
+          <div class="chart" id="chart-t3"></div>
+        </div>
+        <div class="eeg-channel">
+          <div class="channel-label">T4</div>
+          <div class="chart" id="chart-t4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
